@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  @apply transition;
+}
+
+@keyframes event-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes freeze-wave {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(34, 211, 238, 0);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 32px rgba(34, 211, 238, 0.3);
+  }
+}
+
+@keyframes boost-surge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+
+@keyframes transform-hum {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(217, 70, 239, 0);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(217, 70, 239, 0.28);
+  }
+}
+
+@keyframes decay-fall {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(251, 191, 36, 0);
+  }
+  50% {
+    transform: translateY(6px) scale(0.98);
+    box-shadow: 0 0 36px rgba(251, 191, 36, 0.28);
+  }
+}
+
+@keyframes wall-warning {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 18px rgba(244, 114, 182, 0.5);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.18);
+    box-shadow: 0 0 40px rgba(244, 114, 182, 1);
+  }
+}
+
+.event-card {
+  animation: event-pop 220ms ease-out;
+}
+
+.event-freeze {
+  animation: event-pop 220ms ease-out, freeze-wave 1.2s ease-in-out infinite;
+}
+
+.event-boost {
+  animation: event-pop 220ms ease-out, boost-surge 0.75s ease-in-out infinite;
+}
+
+.event-transform {
+  animation: event-pop 220ms ease-out, transform-hum 1s ease-in-out infinite;
+}
+
+.event-decay {
+  animation: event-pop 220ms ease-out, decay-fall 0.9s ease-in-out infinite;
+}
+
+.wall-warning {
+  animation: wall-warning 0.45s steps(2, end) infinite;
+}

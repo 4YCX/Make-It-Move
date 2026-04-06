@@ -1,0 +1,7 @@
+{
+  "name": "agent-arena",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ]
+}
