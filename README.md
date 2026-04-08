@@ -1,5 +1,7 @@
 # Make-It-Move (MIMO) v0
 ![alt text](image-1.png)
+<img width="1875" height="1210" alt="image" src="https://github.com/user-attachments/assets/73e99ace-959d-4a81-b7f3-93856908e5b4" />
+
 ## 1. Background 
 
 Make-It-Move is a realtime human-vs-agent chase game built with Next.js and FastAPI.
